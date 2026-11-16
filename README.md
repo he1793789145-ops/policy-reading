@@ -59,12 +59,17 @@
 <技能根目录>/
 └── policy-reading/
     ├── SKILL.md
-    └── references/
-        ├── method.md
-        ├── judging.md
-        ├── sources.md
-        └── report.md
+    ├── references/
+    │   ├── method.md
+    │   ├── judging.md
+    │   ├── sources.md
+    │   └── report.md
+    └── scripts/
+        ├── check_wenhao.py   文号核验
+        └── read_pdf.py       读 PDF 附件
 ```
+
+两个脚本都是可选增强：不装 Python 库也能用（`read_pdf.py` 自带纯标准库后端），技能正文不依赖它们，但缺了它们这两件事就会退回「凭手感」。脚本用 Python 3 运行，只用标准库；有 pypdf 时自动优先用它。
 
 技能根目录通常是：
 
@@ -146,9 +151,10 @@
 policy-reading/
 ├── skill/                  ← 技能本体（安装这个）
 │   ├── SKILL.md            八步流程与完成标准
-│   └── references/         按需加载：方法论、判读词表、源清单、报告骨架
-├── CONTEXT.md              21 个术语的 glossary
-├── docs/adr/               5 条决策记录
+│   ├── references/         按需加载：方法论、判读词表、源清单、报告骨架
+│   └── scripts/            可选：文号核验、PDF 读取
+├── CONTEXT.md              23 个术语的 glossary
+├── docs/adr/               7 条决策记录
 └── evals/                  3 组 with/without 对照 + 1 组复验
 ```
 
