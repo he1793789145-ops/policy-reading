@@ -1,0 +1,40 @@
+{
+  "skill_name": "policy-reading",
+  "iteration": 1,
+  "method": "qualitative with/without comparison; 任务原文完全相同，唯一差别是给不给技能",
+  "evals": [
+    {
+      "id": 0,
+      "eval_name": "county-appliance",
+      "prompt": "我在县城做家电维修，想看看十五五规划里有没有跟我相关的机会",
+      "paths": {
+        "with_skill": "evals/iteration-1/eval-0-county-appliance/with_skill/outputs/report.md",
+        "without_skill": "evals/iteration-1/eval-0-county-appliance/without_skill/outputs/report.md"
+      },
+      "expected": "走全流程：定轨（就业/创业、县城、家电维修的既有能力）→ 地方定位法落到位 → 产业链折算成具体环节 → 三档判定 → 机会与限制成对 → 一周千元触达真实客户的验证动作。",
+      "watch_for": "是否真的用了地方层级；环节是否追得到文件；有没有落到验证动作。"
+    },
+    {
+      "id": 1,
+      "eval_name": "miit-design-draft",
+      "prompt": "工信部刚发了个《工业设计中心管理办法》征求意见稿，帮我看看这对我做工业设计外包有什么影响",
+      "paths": {
+        "with_skill": "evals/iteration-1/eval-1-miit-design-draft/with_skill/outputs/report.md",
+        "without_skill": "evals/iteration-1/eval-1-miit-design-draft/without_skill/outputs/report.md"
+      },
+      "expected": "走只判读分支：拿到征求意见稿原文与起草说明，把“草案是信号不是最终政策”说出来，判读表述与门槛条件（申报资格、认定标准），再给对该外包业务的影响。",
+      "watch_for": "有没有把草案当结果；有没有漏掉“谁因此获得资格”这层；工信征求意见稿全文是否真读到。"
+    },
+    {
+      "id": 2,
+      "eval_name": "eldercare-quit",
+      "prompt": "都说养老是蓝海，政策一直在推，我要不要现在就辞职去做？",
+      "paths": {
+        "with_skill": "evals/iteration-1/eval-2-eldercare-quit/with_skill/outputs/report.md",
+        "without_skill": "evals/iteration-1/eval-2-eldercare-quit/without_skill/outputs/report.md"
+      },
+      "expected": "挡住两个坑：不把政策热点当赚钱机会、不鼓励裸辞；用跨年表区分“一直在推进”与“只有概念”；机会与限制信号成对；最后落到一周千元、必须触达真实客户的验证。",
+      "watch_for": "会不会顺着用户说“是蓝海，可以干”；有没有限制信号；有没有给出可执行的验证动作而不是劝告。"
+    }
+  ]
+}
